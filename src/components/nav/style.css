@@ -1,60 +1,4 @@
-/* .navbar .correct {
-  -webkit-animation: .4s correct;
-  animation: .4s correct
-}
 
-.navbar .incorrect {
-  -webkit-animation: .4s incorrect;
-  animation: .4s incorrect
-}
-
-@-webkit-keyframes correct {
-  0% {
-    color: #fff
-  }
-  50% {
-    color: #2e7d32
-  }
-  to {
-    color: #fff
-  }
-}
-
-@keyframes correct {
-  0% {
-    color: #fff
-  }
-  50% {
-    color: #2e7d32
-  }
-  to {
-    color: #fff
-  }
-}
-
-@-webkit-keyframes incorrect {
-  0% {
-    color: #fff
-  }
-  50% {
-    color: #c62828
-  }
-  to {
-    color: #fff
-  }
-}
-
-@keyframes incorrect {
-  0% {
-    color: #fff
-  }
-  50% {
-    color: #c62828
-  }
-  to {
-    color: #fff
-  }
-} */
 
 .navbar {
   background: #5133a4;
@@ -77,7 +21,7 @@
 .navbar li {
   display: inline-block;
   padding: 26px 0;
-  width: 80%;
+  width: 60%;
   text-align: center
 }
 
@@ -88,7 +32,7 @@
     width: 40%
   }
   .navbar li:nth-child(2) {
-    width: 60%
+    width: 40%
   }
   .navbar li:last-child {
     width: 40%

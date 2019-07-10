@@ -1,15 +1,16 @@
-import React , { Component } from "react";
-import Img from "../img/dbz.gif"
+import React, { Component } from "react";
+import Img from "../img/dbz.gif";
 import "./style.css";
-import Data from "../imgdata/img.json"
-import FriendCard from "../Card/friendCard.js"
+import Data from "../imgdata/img.json";
+import Nav from "..//nav/nav.js";
+import Header from "../Hero/Hero.js";
+import Alert from "../alert/alert.js";
+import Card from "../Card/Card.js";
 
-console.log(Data.img);
-console.log(Data.id);
 console.log(Data);
 console.log(Img);
 
-function shuffleArr(array) {
+const shuffleArr = array => {
   for (let i = array.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
@@ -17,14 +18,13 @@ function shuffleArr(array) {
   return array;
 };
 
-
 class Main extends Component {
- 
   state = {
     Data,
     score: 0,
-    topScore:0,
-    Clicked:false
+    topScore: 0,
+    win: "",
+    Clicked: false
   };
 
   shuffleData = () => {
@@ -32,33 +32,75 @@ class Main extends Component {
     this.setState({ Data: shuffled });
   };
 
-  componentDidMount(){
+  componentDidMount() {
     this.shuffleData();
   }
 
-  
+  handleClick = id => {
+    console.log(id);
 
-render(){
-  return(
- <div className = "container">
-   {/* <img alt = "" src ={Img}/> */}
-   {/* <h1>{names}</h1> */}
-{this.state.Data.map((item)=>(
-  <FriendCard 
-  key = {item.id}
-  image= {item.image}
-  name = {item.name}
-  clicked = {item.clicked}
-  />
- 
+    let clickedGuess = false;
+    
+    const newList = this.state.Data.map(item => {
+      // console.log(item.clickedGuess);
+      
+      if (item.id === id) {
+        console.log(item);
+        
+        if (!item.clickedGuess) {
+          
+          clickedGuess = true;
+          // this.setState({clicked: clickedGuess})
+          console.log(item);
+          
+        }
+      }
+      return item;
+    });
+    console.log(clickedGuess);
+    (clickedGuess) ?  
+    this.handleIncrement(newList) 
+    :  
+    console.log("here we are ");
+     
+    
+    
+  };
 
+  handleIncrement = () => {
 
-))}
- </div>
-  )
-}
+    let newScore = this.state.score;
+    newScore++;
+    this.setState({score: newScore});
 
+    
+    
+  };
+
+  // };
+
+  render() {
+    return (
+      <div>
+        <Nav score={this.state.score} />
+        <Header />
+        <div className="container">
+          <Alert />
+
+          {this.state.Data.map(item => (
+            <Card
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              name={item.name}
+              handleClick={this.handleClick}
+              clicked={this.clicked}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Main;
-

@@ -1,10 +1,10 @@
 import React from "react";
 import "./style.css";
 
-const FriendCard = props => (
+const Card = props => (
   <div 
     className="card" 
-    value={props.id} 
+    id={props.id} 
     onClick={() => props.handleClick(props.id)}
     clicked = {props.clicked}
   >
@@ -14,4 +14,5 @@ const FriendCard = props => (
   </div>
 );
 
-export default FriendCard;
+export default Card;
+
