@@ -9,29 +9,39 @@ console.log(Data.id);
 console.log(Data);
 console.log(Img);
 
-// function shuffleFriends(array) {
-//   for (let i = array.length - 1; i > 0; i--) {
-//     let j = Math.floor(Math.random() * (i + 1));
-//     [array[i], array[j]] = [array[j], array[i]];
-//   }
-//   return array;
-// };
+function shuffleArr(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 
 class Main extends Component {
-  constructor (props) {
-    super(props)
-  
-  this.state = {
-  Data
+ 
+  state = {
+    Data,
+    score: 0,
+    topScore:0,
+    Clicked:false
   };
 
+  shuffleData = () => {
+    let shuffled = shuffleArr(Data);
+    this.setState({ Data: shuffled });
+  };
+
+  componentDidMount(){
+    this.shuffleData();
   }
+
+  
 
 render(){
   return(
  <div className = "container">
-   <img alt = "" src ={Img}/>
+   {/* <img alt = "" src ={Img}/> */}
    {/* <h1>{names}</h1> */}
 {this.state.Data.map((item)=>(
   <FriendCard 
