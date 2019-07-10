@@ -1,0 +1,74 @@
+[
+  {
+  "id" : 1,
+  "name": "dbz",
+  "image" : "../img/dbz.gif",
+  "clicked": false
+  },
+  {
+  "id" : 2,
+  "name": "dogBlinking",
+  "image" : "../img/dogBlinking.gif",
+  "clicked": false
+  },
+  {
+  "id" : 3,
+  "name": "eyebrows",
+  "image" : "../img/eyebrows.gif",
+  "clicked": false
+  },
+  {
+  "id" : 4,
+  "name": "fatCat",
+  "image" : "../img/fatCat.gif",
+  "clicked": false
+  },
+  {
+  "id" : 5,
+  "name": "fatMac",
+  "image" : "../img/fatMac.gif",
+  "clicked": false
+  },
+  {
+  "id" : 6,
+  "name": "headNod",
+  "image" : "../headNod/dbz.gif",
+  "clicked": false
+  },
+  {
+  "id" : 7,
+  "name": "redSoloCup",
+  "image" : "../img/redSoloCup.gif",
+  "clicked": false
+  },
+  {
+  "id" : 8,
+  "name": "sadKanye",
+  "image" : "../img/sadKanye.gif",
+  "clicked": false
+  },
+  {
+  "id" : 9,
+  "name": "sayAgain",
+  "image" : "../img/sayAgain.gif",
+  "clicked": false
+  },
+  {
+  "id" : 10,
+  "name": "the office",
+  "image" : "../img/the office.gif",
+  "clicked": false
+  },
+  {
+  "id" : 11,
+  "name": "trumpLunch",
+  "image" : "../img/trumpLunch.gif",
+  "clicked": false
+  },
+  {
+  "id" : 12,
+  "name": "whatDoesThatMean",
+  "image" : "../img/whatDoesThatMean.gif",
+  "clicked": false
+  }
+]
