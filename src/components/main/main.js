@@ -50,7 +50,7 @@ class Main extends Component {
         if (!item.clickedGuess) {
           
           clickedGuess = true;
-          // this.setState({clicked: clickedGuess})
+          this.setState({clicked: true})
           console.log(item);
           
         }
@@ -68,13 +68,13 @@ class Main extends Component {
   };
 
   handleIncrement = () => {
-
+    console.log("what are you doing ");
+    
     let newScore = this.state.score;
     newScore++;
     this.setState({score: newScore});
 
-    
-    
+    // this.shuffleData();
   };
 
   // };
@@ -86,7 +86,7 @@ class Main extends Component {
         <Header />
         <div className="container">
           <Alert />
-
+  
           {this.state.Data.map(item => (
             <Card
               key={item.id}
@@ -94,7 +94,7 @@ class Main extends Component {
               image={item.image}
               name={item.name}
               handleClick={this.handleClick}
-              clicked={this.clicked}
+              clicked={item.clicked}
             />
           ))}
         </div>

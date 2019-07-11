@@ -1,4 +1,4 @@
-.card {
+.card img {
   background-size: cover;
   background-position: 50%;
   height: 170px;
@@ -11,7 +11,7 @@
   cursor: pointer
 }
 
-.card:hover {
+.card img:hover {
   -webkit-transform: scale(1.05);
   -ms-transform: scale(1.05);
   transform: scale(1.05);
