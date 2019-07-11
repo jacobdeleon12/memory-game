@@ -47,7 +47,7 @@ class Main extends Component {
       if (item.id === id) {
         console.log(item);
         
-        if (!item.clickedGuess) {
+        if (!item.clicked) {
           
           clickedGuess = true;
           this.setState({clicked: true})
