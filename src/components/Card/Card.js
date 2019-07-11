@@ -6,7 +6,7 @@ const Card = props => (
     className="card" 
     id={props.id} 
     onClick={() => props.handleClick(props.id)}
-    clicked = {props.clicked}
+    // clicked = {props.clicked}
   >
     
       <img alt={props.name} src={props.image} />

@@ -1,6 +1,6 @@
 .header {
   background-color: #2c323c;
-  background-image: url("../img/bananas.png");
+  /* background-image: url("../../../public/img/bananas.png"); */
   background-repeat: repeat;
   color: rgb(0, 0, 0);
   min-height: 400px;
